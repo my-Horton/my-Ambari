@@ -25,7 +25,7 @@ service docker start
 usermod -aG docker vagrant
 
 # Ambari-Server
-curl -Lo /root/ambari-functions https://raw.githubusercontent.com/freygrob/docker-ambari/master/ambari-functions
+curl -Lo /root/ambari-functions https://raw.githubusercontent.com/my-Horton/my_docker-ambari/my-ambari/ambari-functions
 source /root/ambari-functions
 
 amb-start-first
