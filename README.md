@@ -1,2 +1,6 @@
 # my-Ambari
-HortonWorks(r) Docker with Ambari. Ready to deploy Full Hadoop Distribution.
+
+Vagrant VM with HortonWorks(r) Ambari Docker. 
+Ready to deploy Full Hadoop Distribution
+
+## See [my-Horton](https://github.com/my-Horton/my-Horton) for complete documentation.
