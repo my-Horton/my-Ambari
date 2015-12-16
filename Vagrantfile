@@ -25,6 +25,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     horton.vm.network :private_network, ip: "192.168.66.101"
   end
 
+  config.vm.synced_folder "../../docker", "/docker"
+
   ###############################################################################
 
   # Create a forwarded port mapping which allows access to a specific port
