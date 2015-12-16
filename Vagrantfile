@@ -4,6 +4,10 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
+# Options
+options = {}
+options[:memory] = Integer(ENV['memory'] || 4096)
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # All Vagrant configuration is done here. The most common configuration
@@ -15,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.insert_key = false
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 4096] # RAM allocated to each VM
+    vb.customize ["modifyvm", :id, "--memory", options[:memory]] # RAM allocated to each VM
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
